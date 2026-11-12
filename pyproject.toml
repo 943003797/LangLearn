@@ -1,0 +1,24 @@
+[project]
+name = "lang-learn"
+version = "0.1.0"
+description = "LangChain / LangGraph (Python) 学习工作区"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.5.0",
+    "langchain-deepseek>=1.1.1",
+    "langchain-text-splitters>=1.1.3",
+    "langgraph>=1.2.20",
+    "numpy>=2.5.4",
+    "python-dotenv>=1.2.4",
+]
+
+# 声明为可安装包：uv sync 会以 editable 方式装进 .venv，
+# 于是 `common` / `core` 从任何目录都能 import，
+# `uv run core/l1_chat.py` 和 `uv run python -m core.l1_chat` 都能跑。
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["common", "core"]

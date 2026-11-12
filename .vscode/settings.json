@@ -1,0 +1,6 @@
+{
+    "smartAssets.skillsSync.mappings": {
+        "copilot": ".github/skills"
+    },
+    "python.terminal.useEnvFile": true
+}

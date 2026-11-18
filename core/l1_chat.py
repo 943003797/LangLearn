@@ -36,7 +36,7 @@ def main() -> None:
     # ---- 3) 流式 ----
     print("[流式] ", end="", flush=True)
     for chunk in model.stream("默写湖心亭看雪"):
-        print(chunk.text, end="", flush=True)
+        print(chunk.text+'-', end="", flush=True)
     print()
 
 
